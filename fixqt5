@@ -1,0 +1,4 @@
+sed -i '/utility/a #include <limits>' qtbase/src/corelib/global/qglobal.h &&
+sed -i '/string/a #include <limits>' qtbase/src/corelib/global/qfloat16.h &&
+sed -i '/qbytearray/a #include <limits>' qtbase/src/corelib/text/qbytearraymatcher.h &&
+sed -i '/type_traits/a #include <limits>' qtdeclarative/src/qmldebug/qqmlprofilerevent_p.h

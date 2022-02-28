@@ -1,0 +1,19 @@
+./configure -prefix $QT5PREFIX \
+-sysconfdir /etc/xdg \
+-confirm-license \
+-no-glib \
+-opensource \
+-dbus-linked \
+-openssl-linked \
+-system-harfbuzz \
+-no-pulseaudio \
+-no-alsa \
+-opengl desktop \
+-no-rpath \
+-nomake examples \
+-nomake tests \
+-syslog \
+-skip qtwebengine && 
+make
+
+
