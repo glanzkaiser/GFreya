@@ -1,0 +1,16 @@
+export XORG_PREFIX="/usr"
+export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc --localstatedir=/var --disable-static"
+export PATH="/opt/qt5/bin:/opt/rustc/bin:/usr/bin:/usr/sbin"
+
+export QT5PREFIX="/opt/qt5"
+export QT5BINDIR="/opt/qt5/bin"
+export QT5DIR="/opt/qt5"
+export CPLUS_INCLUDE_PATH="/usr"
+export PLUS_INCLUDE_PATH="/usr/include"
+export C_INCLUDE_PATH="/usr/include"
+export LIBRARY_PATH="/usr/lib"
+
+# For building
+
+export MANPATH="/usr/share/man"
+export PKG_CONFIG_PATH="/opt/qt5/lib/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig"
