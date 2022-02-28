@@ -1,0 +1,8 @@
+cat >> /etc/sudoers.d/qt << "EOF"
+Defaults env_keep += QT_PLUGIN_PATH
+Defaults env_keep += QML2_IMPORT_PATH
+EOF
+
+cat >> /etc/sudoers.d/kde << "EOF"
+Defaults env_keep += KF5_PREFIX
+EOF
