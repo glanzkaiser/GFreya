@@ -1,0 +1,7 @@
+cat >> /etc/ld.so.conf << "EOF"
+# Begin KF5 addition
+
+/opt/kf5/lib
+
+# End KF5 addition
+EOF
