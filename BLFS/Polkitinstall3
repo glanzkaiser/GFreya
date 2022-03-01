@@ -1,0 +1,7 @@
+./configure --prefix=/usr        \
+            --sysconfdir=/etc    \
+            --localstatedir=/var \
+            --disable-static     \
+            --with-os-type=LFS   \
+            --disable-libsystemd-login &&
+make
