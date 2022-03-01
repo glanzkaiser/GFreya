@@ -1,0 +1,2 @@
+patch -Np1 -i ../polkit-0.119-fix_elogind_detection-1.patch &&
+autoreconf -fv
