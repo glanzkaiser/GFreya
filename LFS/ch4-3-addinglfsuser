@@ -1,0 +1,2 @@
+groupadd valhalla
+useradd -s /bin/bash -g valhalla -m -k /dev/null silmeria
