@@ -1,0 +1,7 @@
+cat > /etc/os-release << "EOF"
+NAME="Linux From Scratch"
+VERSION="11.0"
+ID=lfs
+PRETTY_NAME="Linux From Scratch 11.0"
+VERSION_CODENAME="<your name here>"
+EOF
