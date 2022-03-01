@@ -1,0 +1,6 @@
+mkdir build
+pushd build
+  ../configure
+  make -C include
+  make -C progs tic
+popd
