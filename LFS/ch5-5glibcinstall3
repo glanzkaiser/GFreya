@@ -1,0 +1,3 @@
+mkdir -v build &&
+cd       build &&
+echo "rootsbindir=/usr/sbin" > configparms
