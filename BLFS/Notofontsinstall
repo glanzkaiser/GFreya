@@ -1,0 +1,4 @@
+install -d -m755         /usr/share/fonts/noto   &&
+unzip Noto-hinted.zip -d /usr/share/fonts/noto   &&
+chmod 0644               /usr/share/fonts/noto/* &&
+fc-cache
