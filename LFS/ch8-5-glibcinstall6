@@ -1,0 +1,1 @@
+sed '/RTLDLIST=/s@/usr@@g' -i /usr/bin/ldd
