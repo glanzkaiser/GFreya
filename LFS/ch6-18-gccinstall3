@@ -1,0 +1,4 @@
+mkdir -v build &&
+cd       build &&
+mkdir -pv $LFS_TGT/libgcc
+ln -s ../../../libgcc/gthr-posix.h $LFS_TGT/libgcc/gthr-default.h
