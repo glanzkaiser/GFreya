@@ -1,0 +1,3 @@
+sed -e '/static.*SIGSTKSZ/d' \
+    -e 's/return kAltStackSize/return SIGSTKSZ * 4/' \
+    -i libsanitizer/sanitizer_common/sanitizer_posix_libcdep.cpp
