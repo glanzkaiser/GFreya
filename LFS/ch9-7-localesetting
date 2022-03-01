@@ -1,0 +1,4 @@
+LC_ALL=en_GB.ISO-8859-1 locale language
+LC_ALL=en_GB.ISO-8859-1 locale charmap
+LC_ALL=en_GB.ISO-8859-1 locale int_curr_symbol
+LC_ALL=en_GB.ISO-8859-1 locale int_prefix
