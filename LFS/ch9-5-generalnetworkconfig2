@@ -1,0 +1,8 @@
+cat > /etc/resolv.conf << "EOF"
+# Begin /etc/resolv.conf
+
+domain freya.valhalla
+nameserver 8.8.8.8
+
+# End /etc/resolv.conf
+EOF
