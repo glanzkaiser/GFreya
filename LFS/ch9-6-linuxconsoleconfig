@@ -1,0 +1,9 @@
+cat > /etc/sysconfig/console << "EOF"
+# Begin /etc/sysconfig/console
+
+LOGLEVEL="3"
+KEYMAP="uk"
+FONT="lat1-16 -m 8859-15"
+
+# End /etc/sysconfig/console
+EOF
