@@ -1,0 +1,1 @@
+ln -sv /proc/self/mounts /etc/mtab
