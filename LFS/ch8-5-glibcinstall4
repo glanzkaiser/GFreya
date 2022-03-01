@@ -1,0 +1,1 @@
+echo "rootsbindir=/usr/sbin" > configparms
