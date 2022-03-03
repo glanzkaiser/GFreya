@@ -1,0 +1,2 @@
+url=https://download.kde.org/Attic/frameworks/5.89/
+wget -r -nH -nd -A '*.xz' -np $url
