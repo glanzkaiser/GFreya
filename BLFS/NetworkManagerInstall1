@@ -1,0 +1,19 @@
+mkdir build &&
+cd    build &&
+
+CXXFLAGS+="-O2 -fPIC"            \
+meson --prefix=/usr              \
+      --buildtype=release        \
+      -Dlibaudit=no              \
+      -Dlibpsl=false             \
+      -Dnmtui=true               \
+      -Dovs=false                \
+      -Dppp=false                \
+      -Dselinux=false            \
+      -Dsession_tracking=elogind \
+      -Dmodem_manager=false      \
+      -Dsystemdsystemunitdir=no  \
+      -Dsystemd_journal=false    \
+      -Dqt=false                 \
+      .. &&
+ninja
