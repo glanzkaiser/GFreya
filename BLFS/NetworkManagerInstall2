@@ -1,0 +1,6 @@
+sed -e 's/-qt4/-qt5/'              \
+    -e 's/moc_location/host_bins/' \
+    -i examples/C/qt/meson.build   &&
+
+sed -e 's/Qt/&5/'                  \
+    -i meson.build
