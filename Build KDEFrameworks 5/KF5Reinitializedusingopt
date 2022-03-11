@@ -1,0 +1,5 @@
+mv -v /opt/kf5 /opt/kf5.old                         &&
+install -v -dm755           $KF5_PREFIX/{etc,share} &&
+ln -sfv /etc/dbus-1         $KF5_PREFIX/etc         &&
+ln -sfv /usr/share/dbus-1   $KF5_PREFIX/share       &&
+ln -sfv /usr/share/polkit-1 $KF5_PREFIX/share
