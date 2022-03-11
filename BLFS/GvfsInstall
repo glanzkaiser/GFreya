@@ -1,0 +1,18 @@
+mkdir build &&
+cd    build &&
+
+meson --prefix=/usr       \
+      --buildtype=release \
+      -Dfuse=false        \
+      -Dgphoto2=false     \
+      -Dafc=false         \
+      -Dbluray=false      \
+      -Dnfs=false         \
+      -Dmtp=false         \
+      -Dsmb=false         \
+      -Dtmpfilesdir=no    \
+      -Ddnssd=false       \
+      -Dgoa=false         \
+      -Dgoogle=false      \
+      -Dsystemduserunitdir=no .. &&
+ninja
