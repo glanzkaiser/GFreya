@@ -1,0 +1,3 @@
+mv -v /usr/share/doc/ghostscript/9.54.0 /usr/share/doc/ghostscript-9.54.0  &&
+rm -rfv /usr/share/doc/ghostscript &&
+cp -r examples/ /usr/share/ghostscript/9.54.0/
