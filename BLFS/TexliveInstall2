@@ -1,0 +1,6 @@
+make install-strip &&
+/sbin/ldconfig &&
+make texlinks &&
+mkdir -pv /opt/texlive/2021/tlpkg/TeXLive/ &&
+install -v -m644 ../texk/tests/TeXLive/* /opt/texlive/2021/tlpkg/TeXLive/ &&
+tar -xf ../../texlive-20210325-tlpdb-full.tar.gz -C /opt/texlive/2021/tlpkg
