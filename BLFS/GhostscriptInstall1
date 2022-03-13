@@ -1,0 +1,7 @@
+rm -rf zlib &&
+
+./configure --prefix=/usr           \
+            --disable-compile-inits \
+            --enable-dynamic        \
+            --with-system-libtiff   &&
+make
