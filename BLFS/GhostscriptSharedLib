@@ -1,0 +1,3 @@
+make soinstall &&
+install -v -m644 base/*.h /usr/include/ghostscript &&
+ln -sfvn ghostscript /usr/include/ps
