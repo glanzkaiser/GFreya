@@ -1,0 +1,13 @@
+export TEXARCH=$(uname -m | sed -e 's/i.86/i386/' -e 's/$/-linux/') &&
+
+./configure --prefix=/opt/texlive/2021                          \
+            --bindir=/opt/texlive/2021/bin/$TEXARCH             \
+            --datarootdir=/opt/texlive/2021/texmf-dist          \
+            --infodir=/opt/texlive/2021/texmf-dist/doc/info     \
+            --libdir=/opt/texlive/2021/texmf-dist               \
+            --mandir=/opt/texlive/2021/texmf-dist/doc/man       \
+            --enable-gc=system                                  \
+            --with-latex=/opt/texlive/2021/texmf-dist/tex/latex \
+            --with-context=/opt/texlive/2021/texmf-dist/tex/context/third &&
+
+make
