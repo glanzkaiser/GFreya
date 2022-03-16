@@ -1,0 +1,10 @@
+make INSTALL_TOP=/usr                \
+     INSTALL_DATA="cp -d"            \
+     INSTALL_MAN=/usr/share/man/man1 \
+     TO_LIB="liblua.so liblua.so.5.4 liblua.so.5.4.3" \
+     install &&
+
+mkdir -pv                      /usr/share/doc/lua-5.4.3 &&
+cp -v doc/*.{html,css,gif,png} /usr/share/doc/lua-5.4.3 &&
+
+install -v -m644 -D lua.pc /usr/lib/pkgconfig/lua.pc
