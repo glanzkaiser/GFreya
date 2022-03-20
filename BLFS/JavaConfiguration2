@@ -1,0 +1,10 @@
+cat >> /etc/man_db.conf << "EOF" &&
+# Begin Java addition
+MANDATORY_MANPATH     /opt/jdk/man
+MANPATH_MAP           /opt/jdk/bin     /opt/jdk/man
+MANDB_MAP             /opt/jdk/man     /var/cache/man/jdk
+# End Java addition
+EOF
+
+mkdir -p /var/cache/man &&
+mandb -c /opt/jdk/man
