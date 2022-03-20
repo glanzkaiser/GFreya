@@ -1,0 +1,7 @@
+install -vdm755 /opt/jdk-16.0.2+7             &&
+cp -Rv build/*/images/jdk/* /opt/jdk-16.0.2+7 &&
+chown -R root:root /opt/jdk-16.0.2+7          &&
+for s in 16 24 32 48; do
+  install -vDm644 src/java.desktop/unix/classes/sun/awt/X11/java-icon${s}.png \
+                  /usr/share/icons/hicolor/${s}x${s}/apps/java.png
+done
