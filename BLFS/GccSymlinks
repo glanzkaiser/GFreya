@@ -1,0 +1,4 @@
+ln -v -sf ../usr/bin/cpp /lib          &&
+ln -v -sf gcc /usr/bin/cc              &&
+install -v -dm755 /usr/lib/bfd-plugins &&
+ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/11.2.0/liblto_plugin.so /usr/lib/bfd-plugins/
