@@ -1,0 +1,9 @@
+make install &&
+
+mkdir -pv /usr/share/gdb/auto-load/usr/lib              &&
+mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib &&
+
+chown -v -R root:root \
+    /usr/lib/gcc/*linux-gnu/11.2.0/include{,-fixed}
+
+rm -rf /usr/lib/gcc/$(gcc -dumpmachine)/11.2.0/include-fixed/bits/
