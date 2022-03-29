@@ -1,0 +1,4 @@
+make install &&
+make install-private-headers &&
+ln -v -sf wish8.6 /usr/bin/wish &&
+chmod -v 755 /usr/lib/libtk8.6.so
