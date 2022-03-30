@@ -1,7 +1,7 @@
 mkdir build &&
 cd    build &&
 
-cmake -DCMAKE_INSTALL_PREFIX=/usr .. &&
+cmake -GNinja \
 -DCMAKE_INSTALL_PREFIX=/opt/hamzstlib/Vtk9 \
 -DVTK_BUILD_EXAMPLES=ON \
 -DCMAKE_BUILD_SHARED_LIBS=ON \
@@ -10,5 +10,5 @@ cmake -DCMAKE_INSTALL_PREFIX=/usr .. &&
 -DVTK_WRAP_JAVA=ON \
 -DVTK_WRAP_PYTHON=ON \
 -DVTK_USE_TK=ON \
--DVTK_WHEEL_BUILD=ON &&
+-DVTK_WHEEL_BUILD=ON /sources/Hamzstlab/VTK-9.1.0 &&
 ninja
