@@ -11,5 +11,5 @@ cmake -GNinja \
 -DVTK_WRAP_PYTHON=ON \
 -DVTK_USE_TK=ON \
 -DVTK_WHEEL_BUILD=ON /sources/Hamzstlab/VTK-9.1.0 \
--Wno-dev &&
+-Wno-dev .. &&
 ninja
