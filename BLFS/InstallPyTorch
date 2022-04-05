@@ -1,0 +1,13 @@
+mkdir build &&
+cd build &&
+cmake -GNinja \
+-DCMAKE_INSTALL_PREFIX=/opt/hamzstlib \
+-DCMAKE_BUILD=Release \
+-DPYTHON_INCLUDE_DIR=$PYTHON_INCLUDE_DIR \
+-DPYTHON_LIBRARY=$PYTHON_LIBRARY \
+-DUSE-CUDA=OFF \
+-DUSE-NUMA=OFF \
+-DUSE-MPI=OFF \
+-DUSE-NCCL=OFF \
+-DUSE-MAGMA=OFF \
+-Wno-dev .. && ninja
