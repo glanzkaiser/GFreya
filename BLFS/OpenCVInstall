@@ -1,0 +1,13 @@
+mkdir build &&
+cd build &&
+cmake -DCMAKE_INSTALL_PREFIX=/opt/hamzstlib \
+-DCMAKE_BUILD_TYPE=Release       \
+-DENABLE_CXX11=ON                \
+-DBUILD_PERF_TESTS=OFF           \
+-DWITH_XINE=ON                   \
+-DBUILD_TESTS=OFF                \
+-DENABLE_PRECOMPILED_HEADERS=OFF \
+-DCMAKE_SKIP_RPATH=ON            \
+-DBUILD_WITH_DEBUG_INFO=OFF      \
+-Wno-dev .. &&
+make
