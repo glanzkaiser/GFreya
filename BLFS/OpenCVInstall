@@ -9,6 +9,7 @@ cmake -DCMAKE_INSTALL_PREFIX=/opt/hamzstlib \
 -DENABLE_PRECOMPILED_HEADERS=OFF \
 -DCMAKE_SKIP_RPATH=ON            \
 -DBUILD_WITH_DEBUG_INFO=OFF      \
+-DOPENCV_GENERATE_PKGCONFIG=ON \
 -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib-4.5.3/modules \
 -Wno-dev .. &&
 make
