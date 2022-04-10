@@ -1,9 +1,9 @@
-mkdir build &&
-cd    build &&
-
 cmake -GNinja \
--DCMAKE_INSTALL_PREFIX=/opt/hamzstlib/Vtk9 \
+-S /opt/hamzstlib/Kitware/src/VTK \
+-B /opt/hamzstlib/Kitware/build/VTK \
+-DCMAKE_INSTALL_PREFIX=/opt/hamzstlib/Kitware/install/VTK \
 -DVTK_BUILD_EXAMPLES=ON \
+-DVTK_ALL_NEW_OBJECT_FACTORY=ON \
 -DBUILD_SHARED_LIBS=ON \
 -DCMAKE_BUILD_TYPE=Release \
 -DVTK_ENABLE_WRAPPING=ON \
@@ -11,6 +11,6 @@ cmake -GNinja \
 -DVTK_WRAP_JAVA=ON \
 -DVTK_WRAP_PYTHON=ON \
 -DVTK_USE_TK=ON \
--DVTK_WHEEL_BUILD=ON /sources/Hamzstlab/VTK-9.1.0 \
+-DVTK_WHEEL_BUILD=ON /opt/hamzstlib/Kitware/src/VTK \
 -Wno-dev .. &&
 ninja
