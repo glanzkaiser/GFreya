@@ -7,10 +7,5 @@ cmake -GNinja \
 -DBUILD_SHARED_LIBS=ON \
 -DCMAKE_BUILD_TYPE=Release \
 -DVTK_ENABLE_WRAPPING=ON \
--DVTK_DATA_STORE=/sources/Hamzstlab/VTK-9.0.1/VtkData \
--DVTK_WRAP_JAVA=ON \
--DVTK_WRAP_PYTHON=ON \
--DVTK_USE_TK=ON \
--DVTK_WHEEL_BUILD=ON /opt/hamzstlib/Kitware/src/VTK \
--Wno-dev .. &&
-ninja
+-DVTK_WRAP_PYTHON=ON &&
+ninja -J4
