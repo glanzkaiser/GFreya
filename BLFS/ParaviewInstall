@@ -1,8 +1,9 @@
 cmake -GNinja \
--S /opt/hamzstlib/Kitware/src/paraview \
+-S /opt/hamzstlib/Kitware/src/ParaView \
+-B /opt/hamzstlib/Kitware/build/ParaView \
 -DPARAVIEW_USE_PYTHON=ON \
 -DPARAVIEW_USE_MPI=ON \
 -DVTK_SMP_IMPLEMENTATION_TYPE=TBB \
--DCMAKE_INSTALL_PREFIX=/opt/hamzstlib/Kitware/install/paraview \
+-DCMAKE_INSTALL_PREFIX=/opt/hamzstlib/Kitware/install/ParaView \
 -DCMAKE_BUILD_TYPE=Release &&
 ninja -j4
