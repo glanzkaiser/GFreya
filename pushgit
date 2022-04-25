@@ -1,0 +1,5 @@
+git add .
+git commit -m "adding files"
+git branch -M main
+git remote add origin https://github.com/glanzkaiser/GFreya.git
+git push -u origin main

@@ -1,19 +1,59 @@
+export prefix="/usr"
+export hamzstlib="/opt/hamzstlib"
+export vtkdata="$hamzstlib/Kitware/install/VTKData/vtk-examples-master/src/Testing/Data"
+export vtkexamples="$hamzstlib/Kitware/install/VTKData/vtk-examples-master/build/bin"
+export caldrazgames="/opt/caldrazgames"
+export grass="$hamzstlib/grass80"
+export paraview="/opt/hamzstlib/Kitware/install/paraview510"
+#export paraview="/opt/hamzstlib/OpenFOAM/ThirdParty-dev/build/linux64Gcc/ParaView-5.6.3"
+export TEXARCH=$(uname -m | sed -e 's/i.86/i386/' -e 's/$/-linux/')
+export JAVA_HOME="/opt/jdk"
+
 export XORG_PREFIX="/usr"
 export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc --localstatedir=/var --disable-static"
-export PATH="/opt/qt5/bin:/opt/rustc/bin:/usr/bin:/usr/sbin"
+export PATH="/opt/qt5/bin:/opt/jdk/bin:$hamzstlib/Kitware/install/VTK/bin:$hamzstlib/bin:$grass/bin:$caldrazgames/bin:/opt/texlive/2021/bin/x86_64-linux:$paraview/bin:/opt/rustc/bin:/usr/bin:/usr/sbin"
 
-export KF5_PREFIX="/usr"
 export QT5PREFIX="/opt/qt5"
 export QT5BINDIR="/opt/qt5/bin"
 export QT5DIR="/opt/qt5"
-export CPLUS_INCLUDE_PATH="/usr"
-export PLUS_INCLUDE_PATH="/usr/include"
-export C_INCLUDE_PATH="/usr/include"
-export LIBRARY_PATH="/usr/lib"
+
+# For C++ header files
+export CPLUS_INCLUDE_PATH="/usr:$hamzstlib/include/opencv4:$hamzstlib/include:$hamzstlib/include/eigen3/Eigen:$caldrazgames/include:$paraview/include"
+
+# For Others 
+export PLUS_INCLUDE_PATH="/usr/include:$hamzstlib/include:$hamzstlib/include/opencv4:$caldrazgames/include"
+
+# For C header files
+export C_INCLUDE_PATH="/usr/include:/usr/local/include/fuse3:/usr/include/SDL2:$hamzstlib/include:$hamzstlib/include/opencv4:$hamzstlib/grass80/include/grass:$caldrazgames/include:$paraview/include"
+
+# For Library (.so .a) 
+export LIBRARY_PATH="/usr/lib:/usr/local/lib:$hamzstlib/lib:$hamzstlib/lib/openmpi:$hamzstlib/Kitware/install/VTK/lib:$grass/lib:$paraview/lib:$hamzstlib/include/opencv4:$caldrazgames/lib:$caldrazgames/lib/OGRE"
+export LD_LIBRARY_PATH=$LIBRARY_PATH
+export SDL2_MIXER_LIBRARIES="$caldrazgames/lib"
+
+# glanzshamzs
+export GHZ="/opt/hamzstlib/glanzshamzs/glanzshamzs"
+export CLG="/usr/share/caldrazgames"
+
+# VTK
+export VTK_DIR="$hamzstlib/Kitware/install/VTK/lib/cmake/vtk-9.1"
+
+# PYTHON
+export PYTHONPATH="/usr/lib/python3.9/site-packages:$hamzstlib/Kitware/install/VTK/lib/python3.9/site-packages:$hamzstlib/lib/python3.9/site-packages"
+export PYTHON_LIBRARY="/usr/lib/python3.9/config-x86_64-linux-gnu/libpython3.9.a"
+export PYTHON_INCLUDE_DIR="/usr/include/python3.9"
 
 # For building
 
-export QT_PLUGIN_PATH="/usr/lib/qt5/plugins:/opt/qt5//lib/plugins"
-export QML2_IMPORT_PATH="/usr/lib/qt5/qml:/opt/qt5/lib/qml"
-export MANPATH="/usr/share/man"
-export PKG_CONFIG_PATH="/opt/qt5/lib/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig"
+export FUSE_LIBS="/usr/local/lib"
+export FUSE_CFLAGS="/usr/local/include/fuse3"
+export XDG_CONFIG_DIRS="/etc/xdg:/opt/kf5/etc/xdg"
+export XDG_DATA_DIRS="$hamzstlib/share:/usr/local/share:/usr/share"
+export QT_PLUGIN_PATH="/opt/qt5/plugins:opt/kf5/lib/plugins:/opt/kf5/lib/plugins/kcms:/usr/lib/qt5/plugins:/usr/lib"
+export MANPATH="/usr/share/man:/opt/jdk/man"
+export PKG_CONFIG_PATH="$hamzstlib/lib/pkgconfig:$hamzstlib/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:$caldrazgames/lib/pkgconfig"
+
+# JAVA
+export MANDATORY_MANPATH="/opt/jdk/man"
+export MANPATH_MAP="/opt/jdk/bin:/opt/jdk/man"
+export MANDB_MAP="/opt/jdk/man:/var/cache/man/jdk"
