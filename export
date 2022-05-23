@@ -11,6 +11,7 @@ export TEXARCH=$(uname -m | sed -e 's/i.86/i386/' -e 's/$/-linux/')
 export JAVA_HOME="/opt/jdk"
 export JULIA_DIR="$hamzstlib/julia-1.7.2"
 export OpenFOAM="$hamzstlib/OpenFOAM/OpenFOAM-dev/etc/bashrc"
+export Chrono_DIR="$physics/chrono-7.0.3/build/cmake"
 
 export XORG_PREFIX="/usr"
 export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc --localstatedir=/var --disable-static"
@@ -21,7 +22,7 @@ export QT5BINDIR="/opt/qt5/bin"
 export QT5DIR="/opt/qt5"
 
 # For C++ header files
-export CPLUS_INCLUDE_PATH="/usr:$physics/irrlicht-1.8.5/include:$hamzstlib/include/opencv4:$hamzstlib/include:$hamzstlib/include/bullet:$hamzstlib/include/eigen3/Eigen:$caldrazgames/include:$paraview/include"
+export CPLUS_INCLUDE_PATH="/usr:$physics/irrlicht-1.8.5/include:$hamzstlib/include/opencv4:$hamzstlib/include:$hamzstlib/include/bullet:$hamzstlib/include/eigen3/Eigen:$caldrazgames/include:$paraview/include:$Chrono_DIR"
 
 # For Others 
 export PLUS_INCLUDE_PATH="/usr/include:$hamzstlib/include:$hamzstlib/include/opencv4:$caldrazgames/include"
