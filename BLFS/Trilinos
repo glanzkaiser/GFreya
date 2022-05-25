@@ -1,11 +1,10 @@
 cmake \
 -GNinja \
 -DTPL_ENABLE_MPI=ON \
--DBUILD_SHARED_LIBS=ON
+-DBUILD_SHARED_LIBS=ON \
 -DMPI_BASE_DIR=<path to mpi install> \
 -DTrilinos_ENABLE_ALL_PACKAGES=ON \
 -DTrilinos_ENABLE_FLOAT=ON \
--DTrilinos_ENABLE_COMPLEX=ON
--DCMAKE_INSTALL_PREFIX=/opt/hamzstlib \
-..
-&& ninja -j4
+-DTrilinos_ENABLE_COMPLEX=ON \
+-DCMAKE_INSTALL_PREFIX=/opt/hamzstlib .. &&
+ninja -j4
