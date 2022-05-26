@@ -80,9 +80,15 @@ cmake \
   -D Boost_LIBRARY_DIRS:FILEPATH="/usr/lib" \
   -D Boost_INCLUDE_DIRS:FILEPATH="/usr/include" \
   -D DART_TESTING_TIMEOUT:STRING=600 \
+  -D Trilinos_ENABLE_ALL_OPTIONAL_PACKAGES:BOOL=ON \
+  -D Trilinos_ENABLE_Anasazi:BOOL=ON \
+  -D Trilinos_ENABLE_Belos:BOOL=ON \
+  -D Trilinos_ENABLE_Ifpack:BOOL=ON \
+  -D Trilinos_ENABLE_Triutils:BOOL=ON \
+  -D Trilinos_ENABLE_EpetraExt:BOOL=ON \
   -D Trilinos_ENABLE_TESTS:BOOL=ON \
   -D Trilinos_ENABLE_DEBUG:BOOL=ON \
-  -D Trilinos_ENABLE_Epetra:BOOL=OFF \
+  -D Trilinos_ENABLE_Epetra:BOOL=ON \
   -D Trilinos_ENABLE_Teuchos:BOOL=ON \
   -D Teuchos_ENABLE_COMPLEX:BOOL=ON \
   -D Teuchos_ENABLE_EXAMPLES:BOOL=ON \
