@@ -8,7 +8,7 @@
 # are other details of my configuration:
 #
 # Operating system: GFreya OS
-# Compiler: gcc (version 4.5.1, user-space installation)
+# Compiler: gcc (version 11.2.0, user-space installation)
 # MPI version: OpenMPI 4.1.3 (user-space installation)
 # Other TPLs: 
 # - Boost (optional, version 1.50.0, user-space installation)
