@@ -1,9 +1,11 @@
-cmake \
+cmake -S /sources/Hamzstlab/Trilinos \
+-GNinja
 -DTPL_ENABLE_MPI=ON \
+-DTrilinos_TRIBITS_DIR:STRING=TriBITS/tribits \
+-DTrilinos_ENABLE_Kokkos=ON \
 -DBUILD_SHARED_LIBS=ON \
--DMPI_BASE_DIR=<path to mpi install> \
+-DMPI_BASE_DIR=/opt/hamzstlib \
 -DTrilinos_ENABLE_ALL_PACKAGES=ON \
 -DTrilinos_ENABLE_FLOAT=ON \
 -DTrilinos_ENABLE_COMPLEX=ON \
--DCMAKE_INSTALL_PREFIX=/opt/hamzstlib .. &&
-make -j4 install
+-DCMAKE_INSTALL_PREFIX=/opt/hamzstlib .. 
