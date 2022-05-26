@@ -9,20 +9,13 @@
 # this case, we're using the MKL for its sparse matrix kernels.  Here
 # are other details of my configuration:
 #
-# Operating system: GNU/Linux
+# Operating system: GFreya OS
 # Compiler: gcc (version 4.5.1, user-space installation)
-# MPI version: OpenMPI 1.4.3 (user-space installation)
+# MPI version: OpenMPI 4.1.3 (user-space installation)
 # Other TPLs: 
-# - Pthread (required for my MKL configuration), 
 # - Boost (optional, version 1.50.0, user-space installation)
 # - OpenMP (optional)
 #
-# I've chosen the single dynamic library way to link with MKL:
-#
-# http://software.intel.com/en-us/articles/a-new-linking-model-single-dynamic-library-mkl_rt-since-intel-mkl-103/
-#
-# I highly recommend this approach if you are able to use dynamic
-# libraries on your system.
 ######################################################################
 
 
