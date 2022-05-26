@@ -1,7 +1,5 @@
 #!/bin/bash
-#
-# Mark Hoemmen <mhoemme AT sandia DOT gov>
-# Time-stamp: <2016-09-21 14:46:49 mhoemme>
+# A modification of https://github.com/trilinos/Trilinos/blob/master/sampleScripts/do-configure-mkl-mpi-gcc-linux (Mark Hoemmen <mhoemme AT sandia DOT gov>
 #
 # Example CMake configure script for Trilinos, that uses Intel's Math
 # Kernel Library (MKL) both for the BLAS and LAPACK implementation,
