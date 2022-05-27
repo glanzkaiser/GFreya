@@ -1,5 +1,5 @@
 cmake \
-    -G Ninja
+    -G Ninja \
     -D BUILD_SHARED_LIBS:BOOL=ON \
     -D CMAKE_CXX_FLAGS:STRING="-ansi -pedantic -Wall" \
     -D CMAKE_INSTALL_PREFIX=/opt/hamzstlib/trilinos \
@@ -43,7 +43,7 @@ cmake \
     -D Tpetra_ENABLE_TESTS:BOOL=ON \
     -D Tpetra_ENABLE_BUGTESTS:BOOL=OFF \
     -D Tpetra_ENABLE_EXAMPLES:BOOL=ON \
-    -D Tpetra_PRINT_Efficiency_Warnings:BOOL=ON \ 
+    -D Tpetra_PRINT_Efficiency_Warnings:BOOL=ON \
     -D Boost_LIBRARY_DIRS:FILEPATH="/usr/lib" \
     -D Boost_INCLUDE_DIRS:FILEPATH="/usr/include" \
     ../Trilinos
