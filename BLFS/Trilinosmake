@@ -1,4 +1,6 @@
 cmake \
+    -D BUILD_SHARED_LIBS:BOOL=ON \
+    -D CMAKE_CXX_FLAGS:STRING="-ansi -pedantic -Wall" \
     -D CMAKE_INSTALL_PREFIX=/opt/hamzstlib/trilinos \
     -D Trilinos_ENABLE_Teuchos=ON \
     -D Trilinos_ENABLE_Tpetra=ON \
@@ -6,22 +8,24 @@ cmake \
     -D Trilinos_ENABLE_Amesos2=ON \
     -D Trilinos_ENABLE_Belos=ON \
     -D Trilinos_ENABLE_Ifpack2=ON \
+    -D Trilinos_ENABLE_Kokkos=ON \
     -D Trilinos_ENABLE_MueLu=ON \
     -D Trilinos_ENABLE_Stratimikos=ON \
-    -D BUILD_SHARED_LIBS:BOOL=ON \
+    -D Trilinos_ENABLE_OpenMP:BOOL=ON \
+    -D Trilinos_TRIBITS_DIR:STRING=TriBITS/tribits \
+    -D Trilinos_ENABLE_FLOAT=ON \
+    -D Trilinos_ENABLE_COMPLEX=ON \
     -D TPL_ENABLE_MPI:BOOL=ON \
     -D MPI_BASE_DIR="/opt/hamzstlib" \
     -D MPI_EXEC:FILEPATH="/opt/hamzstlib/bin/mpiexec" \
     -D MPI_Fortran_COMPILER:FILEPATH="/opt/hamzstlib/bin/mpif90" \
     -D MPI_CXX_COMPILER:FILEPATH="/opt/hamzstlib/bin/mpicxx" \
     -D MPI_C_COMPILER:FILEPATH="/opt/hamzstlib/bin/mpicc" \
-    -D CMAKE_CXX_FLAGS:STRING="-ansi -pedantic -Wall" \
     -D BLAS_LIBRARY_DIRS:FILEPATH="/opt/hamzstlib/lib" \
     -D BLAS_LIBRARY_NAMES:STRING="blas" \
     -D LAPACK_LIBRARY_DIRS:FILEPATH="/opt/hamzstlib/lib" \
     -D LAPACK_LIBRARY_NAMES:STRING="lapack" \
     -D TPL_ENABLE_MKL:BOOL=OFF \
-    -D Trilinos_ENABLE_OpenMP:BOOL=ON \
     -D TPL_ENABLE_Pthread:BOOL=ON \
     -D TPL_ENABLE_Boost:BOOL=ON \
     -D Boost_LIBRARY_DIRS:FILEPATH="/usr/lib" \
