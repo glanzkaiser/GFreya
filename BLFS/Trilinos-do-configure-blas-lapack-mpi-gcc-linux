@@ -80,7 +80,8 @@ cmake \
   -D Boost_LIBRARY_DIRS:FILEPATH="/usr/lib" \
   -D Boost_INCLUDE_DIRS:FILEPATH="/usr/include" \
   -D DART_TESTING_TIMEOUT:STRING=600 \
-  -D Trilinos_ENABLE_ALL_OPTIONAL_PACKAGES:BOOL=ON \
+  -D Trilinos_ENABLE_ALL_OPTIONAL_PACKAGES:BOOL=OFF \
+  -D Trilinos_ENABLE_SEACase:BOOL=ON \
   -D Trilinos_ENABLE_Amesos2:BOOL=ON \
   -D Trilinos_ENABLE_Anasazi:BOOL=ON \
   -D Trilinos_ENABLE_AztecOO:BOOL=ON \
@@ -89,7 +90,8 @@ cmake \
   -D Trilinos_ENABLE_Ifpack2:BOOL=ON \
   -D Trilinos_ENABLE_Intrepid2:BOOL=ON \
   -D Trilinos_ENABLE_Triutils:BOOL=ON \
-  -D Trilinos_ENABLE_Krino:BOOL=ON \
+  -D Trilinos_ENABLE_Kokkos:BOOL=ON \
+  -D Trilinos_ENABLE_Krino:BOOL=OFF \
   -D Trilinos_ENABLE_MueLU:BOOL=ON \
   -D Trilinos_ENABLE_Panzer:BOOL=ON \
   -D Trilinos_ENABLE_Phalanx:BOOL=ON \
@@ -105,7 +107,6 @@ cmake \
   -D Teuchos_ENABLE_COMPLEX:BOOL=ON \
   -D Teuchos_ENABLE_EXAMPLES:BOOL=ON \
   -D Teuchos_ENABLE_TESTS:BOOL=ON \
-  -D Trilinos_ENABLE_Kokkos:BOOL=ON \
   -D Kokkos_ENABLE_EXAMPLES:BOOL=ON \
   -D Kokkos_ENABLE_TESTS:BOOL=ON \
   -D Kokkos_ENABLE_TSQR:BOOL=ON \
@@ -115,6 +116,7 @@ cmake \
   -D Tpetra_ENABLE_BUGTESTS:BOOL=OFF \
   -D Tpetra_ENABLE_EXAMPLES:BOOL=ON \
   -D Tpetra_PRINT_Efficiency_Warnings:BOOL=ON \
+  -D TPL_ENABLE_Netcdf=OFF \
   $EXTRA_ARGS \
   ../Trilinos
 
