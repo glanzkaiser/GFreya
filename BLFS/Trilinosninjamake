@@ -11,7 +11,6 @@ cmake \
     -D Trilinos_ENABLE_Amesos2=ON \
     -D Trilinos_ENABLE_Belos=ON \
     -D Trilinos_ENABLE_Galeri=ON \
-    -D Trilinos_ENABLE_Gtest=ON \
     -D Trilinos_ENABLE_Ifpack=ON \
     -D Trilinos_ENABLE_Ifpack2=ON \
     -D Trilinos_ENABLE_Kokkos=ON \
@@ -21,7 +20,6 @@ cmake \
     -D Trilinos_ENABLE_MOOCHO=ON \
     -D Trilinos_ENABLE_NOX=ON \
     -D Trilinos_ENABLE_Rythmos=ON \
-    -D Trilinos_ENABLE_Sacado=ON \
     -D Trilinos_ENABLE_Stratimikos=ON \
     -D Trilinos_ENABLE_Teko=ON \
     -D Trilinos_ENABLE_Tempus=ON \
