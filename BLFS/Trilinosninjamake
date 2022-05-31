@@ -34,7 +34,7 @@ cmake \
     -D Trilinos_ENABLE_FLOAT=ON \
     -D Trilinos_ENABLE_COMPLEX=ON \
     -D TPL_ENABLE_MPI:BOOL=ON \
-    -D MPI_BASE_DIR="/opt/hamzstlib" \
+    -D MPI_BASE_DIR="/opt/hamzstlib/openfoam/ThirdParty-9/platforms/linux64Gcc/openmpi-2.1.1" \
     -D MPI_EXEC:FILEPATH="/opt/hamzstlib/openfoam/ThirdParty-9/platforms/linux64Gcc/openmpi-2.1.1/bin/mpiexec" \
     -D MPI_Fortran_COMPILER:FILEPATH="/opt/hamzstlib/openfoam/ThirdParty-9/platforms/linux64Gcc/openmpi-2.1.1/bin/mpif90" \
     -D MPI_CXX_COMPILER:FILEPATH="/opt/hamzstlib/openfoam/ThirdParty-9/platforms/linux64Gcc/openmpi-2.1.1/bin/mpicxx" \
