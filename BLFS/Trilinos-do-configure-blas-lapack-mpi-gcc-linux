@@ -55,7 +55,7 @@ concat_path $HOME/pkg/gcc-4.5.1/bin
 EXTRA_ARGS=$@
 
 # Point to the user-space install of OpenMPI (MPI implementation).
-MPI_ROOT=/opt/hamzstlib
+MPI_ROOT=/opt/hamzstlib/openfoam/ThirdParty-9/platforms/linux64Gcc/openmpi-2.1.1
 MPI_BIN=$MPI_ROOT/bin
 
 cmake \
@@ -88,11 +88,20 @@ cmake \
   -D Trilinos_ENABLE_Anasazi=ON \
   -D Trilinos_ENABLE_Amesos2=ON \
   -D Trilinos_ENABLE_Belos=ON \
+  -D Trilinos_ENABLE_Galeri=ON \
+  -D Trilinos_ENABLE_Ifpack=ON \
   -D Trilinos_ENABLE_Ifpack2=ON \
   -D Trilinos_ENABLE_Kokkos=ON \
   -D Trilinos_ENABLE_Komplex=ON \
   -D Trilinos_ENABLE_MueLu=ON \
+  -D Trilinos_ENABLE_MOOCHO=ON \
+  -D Trilinos_ENABLE_NOX=ON \
+  -D Trilinos_ENABLE_Rythmos=ON \
+  -D Trilinos_ENABLE_Sacado=ON \
   -D Trilinos_ENABLE_Stratimikos=ON \
+  -D Trilinos_ENABLE_Teko=ON \
+  -D Trilinos_ENABLE_Tempus=ON \
+  -D Trilinos_ENABLE_Thyra=ON \
   -D Trilinos_ENABLE_TESTS:BOOL=ON \
   -D Trilinos_ENABLE_DEBUG:BOOL=ON \
   -D Trilinos_ENABLE_Xpetra:BOOL=ON \
