@@ -63,8 +63,8 @@ cmake \
   -D CMAKE_BUILD_TYPE:STRING=DEBUG \
   -D CMAKE_INSTALL_PREFIX:FILEPATH="/opt/hamzstlib/trilinos" \
   -D TPL_ENABLE_MPI:BOOL=ON \
-  -D MPI_BASE_DIR="/opt/hamzstlib" \
-  -D MPI_EXEC:FILEPATH="/opt/hamzstlib/bin/mpiexec" \
+  -D MPI_BASE_DIR="/opt/hamzstlib/openfoam/ThirdParty-9/platforms/linux64Gcc/openmpi-2.1.1" \
+  -D MPI_EXEC:FILEPATH="/opt/hamzstlib/openfoam/ThirdParty-9/platforms/linux64Gcc/openmpi-2.1.1/bin/mpiexec" \
   -D MPI_Fortran_COMPILER:FILEPATH="${MPI_BIN}/mpif90" \
   -D MPI_CXX_COMPILER:FILEPATH="${MPI_BIN}/mpicxx" \
   -D MPI_C_COMPILER:FILEPATH="${MPI_BIN}/mpicc" \
@@ -97,7 +97,6 @@ cmake \
   -D Trilinos_ENABLE_MOOCHO=ON \
   -D Trilinos_ENABLE_NOX=ON \
   -D Trilinos_ENABLE_Rythmos=ON \
-  -D Trilinos_ENABLE_Sacado=ON \
   -D Trilinos_ENABLE_Stratimikos=ON \
   -D Trilinos_ENABLE_Teko=ON \
   -D Trilinos_ENABLE_Tempus=ON \
