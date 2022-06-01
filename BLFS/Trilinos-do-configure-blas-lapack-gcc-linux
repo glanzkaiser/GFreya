@@ -9,10 +9,10 @@
 #
 # Operating system: GFreya OS
 # Compiler: gcc (version 11.2.0, user-space installation)
-# MPI version: OpenMPI 4.1.3 (user-space installation)
+#
 # Other TPLs: 
 # - Boost (optional, version 1.50.0, user-space installation)
-# - OpenMP (optional)
+# 
 #
 ######################################################################
 
@@ -94,6 +94,7 @@ cmake \
   -D Trilinos_ENABLE_Kokkos=ON \
   -D Trilinos_ENABLE_KokkosKernels=ON \
   -D Trilinos_ENABLE_Komplex=ON \
+  -D Trilinos_ENABLE_LOCA=ON \
   -D Trilinos_ENABLE_MueLu=ON \
   -D Trilinos_ENABLE_MOOCHO=ON \
   -D Trilinos_ENABLE_NOX=ON \
