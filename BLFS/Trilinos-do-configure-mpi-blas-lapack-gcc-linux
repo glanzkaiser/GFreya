@@ -1,18 +1,14 @@
 #!/bin/bash
 # A modification of https://github.com/trilinos/Trilinos/blob/master/sampleScripts/do-configure-mkl-mpi-gcc-linux (Mark Hoemmen <mhoemme AT sandia DOT gov>
 #
-# Example CMake configure script for Trilinos, that uses Intel's Math
-# Kernel Library (MKL) both for the BLAS and LAPACK implementation,
-# and as a separate MKL TPL (Third-Party Library).  Specifically, in
-# this case, we're using the MKL for its sparse matrix kernels.  Here
-# are other details of my configuration:
-#
+# Example CMake configure script for Trilinos, that uses: 
+# BLAS and LAPACK implementation, With MPI
+# 
 # Operating system: GFreya OS
 # Compiler: gcc (version 11.2.0, user-space installation)
-#
 # Other TPLs: 
+# - OpenMPI (optional, version 4.1.14, user-space installation)
 # - Boost (optional, version 1.50.0, user-space installation)
-# 
 #
 ######################################################################
 
@@ -55,7 +51,7 @@ concat_path $HOME/pkg/gcc-4.5.1/bin
 EXTRA_ARGS=$@
 
 # Point to the user-space install of OpenMPI (MPI implementation).
-MPI_ROOT=/opt/hamzstlib/
+MPI_ROOT=/opt/hamzstlib
 MPI_BIN=$MPI_ROOT/bin
 
 cmake \
@@ -88,21 +84,13 @@ cmake \
   -D Trilinos_ENABLE_Anasazi=ON \
   -D Trilinos_ENABLE_Amesos2=ON \
   -D Trilinos_ENABLE_Belos=ON \
-  -D Trilinos_ENABLE_Galeri=ON \
   -D Trilinos_ENABLE_Ifpack=ON \
   -D Trilinos_ENABLE_Ifpack2=ON \
   -D Trilinos_ENABLE_Kokkos=ON \
-  -D Trilinos_ENABLE_KokkosKernels=ON \
   -D Trilinos_ENABLE_Komplex=ON \
-  -D Trilinos_ENABLE_LOCA=ON \
+  -D Trilinos_ENABLE_ML=ON \
   -D Trilinos_ENABLE_MueLu=ON \
-  -D Trilinos_ENABLE_MOOCHO=ON \
-  -D Trilinos_ENABLE_NOX=ON \
-  -D Trilinos_ENABLE_Rythmos=ON \
   -D Trilinos_ENABLE_Stratimikos=ON \
-  -D Trilinos_ENABLE_Teko=ON \
-  -D Trilinos_ENABLE_Tempus=ON \
-  -D Trilinos_ENABLE_Thyra=ON \
   -D Trilinos_ENABLE_TESTS:BOOL=ON \
   -D Trilinos_ENABLE_DEBUG:BOOL=ON \
   -D Trilinos_ENABLE_Xpetra:BOOL=ON \
@@ -120,4 +108,3 @@ cmake \
   -D TPL_ENABLE_Netcdf=OFF \
   $EXTRA_ARGS \
   ../Trilinos
-
