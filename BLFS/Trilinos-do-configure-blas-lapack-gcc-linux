@@ -93,7 +93,11 @@ cmake \
   -D Trilinos_ENABLE_Pliris=ON \
   -D Trilinos_ENABLE_Rythmos=ON \
   -D Trilinos_ENABLE_Stratimikos=ON \
-  -D Trilinos_ENABLE_TESTS:BOOL=ON \
+  -D Trilinos_ENABLE_Teko=ON \
+  -D Trilinos_ENABLE_Tempus=ON \
+  -D Trilinos_ENABLE_Thyra=ON \
+  -D NOX_ENABLE_TESTS:BOOL=OFF \
+  -D Trilinos_ENABLE_TESTS:BOOL=OFF \
   -D Trilinos_ENABLE_DEBUG:BOOL=ON \
   -D Trilinos_ENABLE_Xpetra:BOOL=ON \
   -D Teuchos_ENABLE_COMPLEX:BOOL=ON \
