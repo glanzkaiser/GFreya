@@ -11,18 +11,26 @@ export TEXARCH=$(uname -m | sed -e 's/i.86/i386/' -e 's/$/-linux/')
 export JAVA_HOME="/opt/jdk"
 export JULIA_DIR="$hamzstlib/julia-1.7.2"
 export OpenFOAM="$hamzstlib/OpenFOAM/OpenFOAM-dev/etc/bashrc"
-export Chrono_DIR="$physics/chrono-7.0.3/build/cmake"
+export Chrono_DIR="$physics/chrono2/build/cmake"
+export KRATOS_SOURCE="$physics/Kratos"
+export KRATOS_SOURCE_DIR=$KRATOS_SOURCE
+export TRILINOS_INCLUDE_DIR="$hamzstlib/trilinos/include"
+export TRILINOS_LIBRARY_DIR="$hamzstlib/trilinos/lib"
+export OMPI_ALLOW_RUN_AS_ROOT="1"
+export OMPI_ALLOW_RUN_AS_ROOT_CONFIRM="1"
+export OMPI="/opt/hamzstlib/openfoam/ThirdParty-9/platforms/linux64Gcc/openmpi-2.1.1"
+export MMG_DIR="/sources/Hamzstlab/mmg"
 
 export XORG_PREFIX="/usr"
 export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc --localstatedir=/var --disable-static"
-export PATH="/opt/qt5/bin:/opt/jdk/bin:$hamzstlib/Kitware/install/VTK/bin:$hamzstlib/bin:$grass/bin:$JULIA_DIR/bin:$caldrazgames/bin:/opt/texlive/2021/bin/x86_64-linux:$paraview/bin:/opt/rustc/bin:/usr/bin:/usr/sbin"
+export PATH="/opt/qt5/bin:/opt/jdk/bin:$OMPI/bin:$hamzstlib/Kitware/install/VTK/bin:$hamzstlib/bin:$hamzstlib/trilinos/bin:$grass/bin:$JULIA_DIR/bin:$caldrazgames/bin:/opt/texlive/2021/bin/x86_64-linux:$paraview/bin:/opt/rustc/bin:/usr/bin:/usr/sbin"
 
 export QT5PREFIX="/opt/qt5"
 export QT5BINDIR="/opt/qt5/bin"
 export QT5DIR="/opt/qt5"
 
 # For C++ header files
-export CPLUS_INCLUDE_PATH="/usr:$physics/irrlicht-1.8.5/include:$hamzstlib/include/opencv4:$hamzstlib/include:$hamzstlib/include/bullet:$hamzstlib/include/eigen3/Eigen:$caldrazgames/include:$paraview/include:$Chrono_DIR"
+export CPLUS_INCLUDE_PATH="/usr:$physics/ASAM_OpenCRG_BS_V1.2.0/c-api/baseline/inc:$physics/irrlicht-1.8.5/include:$OMPI/include:$hamzstlib/trilinos/include:$hamzstlib/glanzshamzs/OpenGL:$$hamzstlib/include/opencv4:$hamzstlib/include:$hamzstlib/include/bullet:$hamzstlib/include/eigen3/Eigen:$caldrazgames/include:$paraview/include:$Chrono_DIR"
 
 # For Others 
 export PLUS_INCLUDE_PATH="/usr/include:$hamzstlib/include:$hamzstlib/include/opencv4:$caldrazgames/include"
@@ -31,19 +39,20 @@ export PLUS_INCLUDE_PATH="/usr/include:$hamzstlib/include:$hamzstlib/include/ope
 export C_INCLUDE_PATH="/usr/include:/usr/local/include/fuse3:/$hamzstlib/include/eigen3/Eigen:/usr/include/SDL2:$hamzstlib/include:$hamzstlib/include/opencv4:$hamzstlib/grass80/include/grass:$caldrazgames/include:$paraview/include"
 
 # For Library (.so .a) 
-export LIBRARY_PATH="/usr/lib:/usr/local/lib:$physics/irrlicht-1.8.5/lib/Linux:$hamzstlib/lib:$hamzstlib/lib/openmpi:$hamzstlib/Kitware/install/VTK/lib:$grass/lib:$paraview/lib:$hamzstlib/include/opencv4:$caldrazgames/lib:$caldrazgames/lib/OGRE"
+export LIBRARY_PATH="/usr/lib:/usr/local/lib:$hamzstlib/trilinos/lib:$OMPI/lib64:$physics/irrlicht-1.8.5/lib/Linux:$hamzstlib/lib:$physics/Kratos-9.1/bin/Release/libs:$hamzstlib/lib/openmpi:$hamzstlib/Kitware/install/VTK/lib:$grass/lib:$paraview/lib:$hamzstlib/include/opencv4:$caldrazgames/lib:$caldrazgames/lib/OGRE"
+
 export LD_LIBRARY_PATH=$LIBRARY_PATH
 export SDL2_MIXER_LIBRARIES="$caldrazgames/lib"
 
 # glanzshamzs
-export GHZ="/opt/hamzstlib/glanzshamzs/glanzshamzs"
+export GHZ="/opt/hamzstlib/glanzshamzs/"
 export CLG="/usr/share/caldrazgames"
 
 # VTK
 export VTK_DIR="$hamzstlib/Kitware/install/VTK/lib/cmake/vtk-9.1"
 
 # PYTHON
-export PYTHONPATH="/usr/lib/python3.9/site-packages:$hamzstlib/Physics/bullet/examples/pybullet:$hamzstlib/Kitware/install/VTK/lib/python3.9/site-packages:$hamzstlib/lib/python3.9/site-packages"
+export PYTHONPATH="/usr/lib/python3.9/site-packages:$physics/Kratos-9.1/bin/Release:$hamzstlib/Physics/bullet/examples/pybullet:$hamzstlib/Kitware/install/VTK/lib/python3.9/site-packages:$hamzstlib/lib/python3.9/site-packages"
 export PYTHON_LIBRARY="/usr/lib/python3.9/config-x86_64-linux-gnu/libpython3.9.a"
 export PYTHON_INCLUDE_DIR="/usr/include/python3.9"
 
