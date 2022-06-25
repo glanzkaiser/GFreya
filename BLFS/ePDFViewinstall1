@@ -1,0 +1,3 @@
+patch -Np1 -i ../epdfview-0.1.8-fixes-2.patch &&
+./configure --prefix=/usr &&
+make
