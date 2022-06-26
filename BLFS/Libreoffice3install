@@ -1,0 +1,45 @@
+sed -e "/gzip -f/d"   \
+    -e "s|.1.gz|.1|g" \
+    -i bin/distro-install-desktop-integration &&
+
+sed -e "/distro-install-file-lists/d" -i Makefile.in &&
+
+./autogen.sh --prefix=$LO_PREFIX         \
+             --sysconfdir=/etc           \
+             --with-vendor=BLFS          \
+             --with-lang='fr en-GB'      \
+             --with-help                 \
+             --with-myspell-dicts        \
+             --without-junit             \
+             --without-system-dicts      \
+             --disable-dconf             \
+             --disable-odk               \
+             --enable-release-build=yes  \
+             --enable-python=system      \
+             --with-jdk-home=/opt/jdk    \
+             --with-system-apr           \
+             --with-system-boost         \
+             --with-system-clucene       \
+             --with-system-curl          \
+             --with-system-epoxy         \
+             --with-system-expat         \
+             --with-system-glm           \
+             --with-system-gpgmepp       \
+             --with-system-graphite      \
+             --with-system-harfbuzz      \
+             --with-system-icu           \
+             --with-system-jpeg          \
+             --with-system-lcms2         \
+             --with-system-libatomic_ops \
+             --with-system-libpng        \
+             --with-system-libxml        \
+             --with-system-neon          \
+             --with-system-nss           \
+             --with-system-odbc          \
+             --with-system-openldap      \
+             --with-system-openssl       \
+             --with-system-poppler       \
+             --with-system-postgresql    \
+             --with-system-redland       \
+             --with-system-serf          \
+             --with-system-zlib
