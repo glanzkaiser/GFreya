@@ -1,0 +1,3 @@
+ln -sv src/libreoffice-help-7.2.0.4/helpcontent2/ &&
+ln -sv src/libreoffice-dictionaries-7.2.0.4/dictionaries/ &&
+ln -sv src/libreoffice-translations-7.2.0.4/translations/
