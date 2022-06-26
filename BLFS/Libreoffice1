@@ -1,0 +1,4 @@
+install -dm755 external/tarballs &&
+ln -sv ../../../libreoffice-dictionaries-7.2.0.4.tar.xz external/tarballs/ &&
+ln -sv ../../../libreoffice-help-7.2.0.4.tar.xz         external/tarballs/ &&
+ln -sv ../../../libreoffice-translations-7.2.0.4.tar.xz external/tarballs/
