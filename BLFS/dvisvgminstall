@@ -1,0 +1,7 @@
+autoreconf -fiv                               &&
+sed -i 's/python/&3/' tests/Makefile.in       &&
+./configure                                    \
+ --bindir=/opt/texlive/2021/bin/${TEXARCH}     \
+ --mandir=/opt/texlive/2021/texmf-dist/doc/man \
+ --with-kpathsea=/opt/texlive/2021            &&
+make
