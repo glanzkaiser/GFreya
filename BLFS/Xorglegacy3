@@ -1,0 +1,12 @@
+for package in $(grep -v '^#' ../legacy.md5 | awk '{print $2}')
+do
+  packagedir=${package%.tar.bz2}
+  tar -xf $package
+  pushd $packagedir
+    ./configure $XORG_CONFIG
+    make
+    as_root make install
+  popd
+  rm -rf $packagedir
+  as_root /sbin/ldconfig
+done
