@@ -1,0 +1,8 @@
+as_root install -dvm 755 /usr/share/xsessions              &&
+cd /usr/share/xsessions/                                   &&
+[ -e plasma.desktop ]                                      ||
+as_root ln -sfv $KF5_PREFIX/share/xsessions/plasma.desktop &&
+as_root install -dvm 755 /usr/share/wayland-sessions       &&
+cd /usr/share/wayland-sessions/                            &&
+[ -e plasmawayland.desktop ]                               ||
+as_root ln -sfv $KF5_PREFIX/share/wayland-sessions/plasmawayland.desktop
