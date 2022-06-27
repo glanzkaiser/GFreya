@@ -1,0 +1,2 @@
+url=https://download.kde.org/stable/frameworks/5.85/
+wget -r -nH -nd -A '*.xz' -np $url
