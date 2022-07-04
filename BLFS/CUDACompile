@@ -1,0 +1,3 @@
+./configure --program-prefix=cuda- \
+--enable-cuda \
+--enable-targets="x86_64-unknown-linux-gnu" CFLAGS='-I/usr/local/cuda/include' LDFLAGS='-lpthread' && time make -j4
