@@ -1,6 +1,7 @@
 export prefix="/usr"
 export hamzstlib="/opt/hamzstlib"
 export physics="$hamzstlib/Physics"
+export math="$hamzstlib/Math"
 export vtkdata="$hamzstlib/Kitware/install/VTKData/vtk-examples-master/src/Testing/Data"
 export vtkexamples="$hamzstlib/Kitware/install/VTKData/vtk-examples-master/build/bin"
 export caldrazgames="/opt/caldrazgames"
@@ -9,7 +10,7 @@ export paraview="/opt/hamzstlib/Kitware/install/paraview510"
 #export paraview="/opt/hamzstlib/OpenFOAM/ThirdParty-dev/build/linux64Gcc/ParaView-5.6.3"
 export TEXARCH=$(uname -m | sed -e 's/i.86/i386/' -e 's/$/-linux/')
 export JAVA_HOME="/opt/jdk"
-export JULIA_DIR="$hamzstlib/julia-1.7.2"
+export JULIA_DIR="$hamzstlib/Math/julia-1.7.2"
 export OpenFOAM="$hamzstlib/OpenFOAM/OpenFOAM-dev/etc/bashrc"
 export Chrono_DIR="$physics/chrono2/build/cmake"
 export KRATOS_SOURCE="$physics/Kratos"
@@ -18,7 +19,7 @@ export TRILINOS_INCLUDE_DIR="$hamzstlib/trilinos/include"
 export TRILINOS_LIBRARY_DIR="$hamzstlib/trilinos/lib"
 export OMPI_ALLOW_RUN_AS_ROOT="1"
 export OMPI_ALLOW_RUN_AS_ROOT_CONFIRM="1"
-export OMPI="/opt/hamzstlib/openfoam/ThirdParty-9/platforms/linux64Gcc/openmpi-2.1.1"
+#export OMPI="/opt/hamzstlib/openfoam/ThirdParty-9/platforms/linux64Gcc/openmpi-2.1.1"
 export MMG_DIR="/sources/Hamzstlab/mmg"
 
 export XORG_PREFIX="/usr"
@@ -39,7 +40,7 @@ export PLUS_INCLUDE_PATH="/usr/include:$hamzstlib/include:$hamzstlib/include/ope
 export C_INCLUDE_PATH="/usr/include:/usr/local/include/fuse3:/$hamzstlib/include/eigen3/Eigen:/usr/include/SDL2:$hamzstlib/include:$hamzstlib/include/opencv4:$hamzstlib/grass80/include/grass:$caldrazgames/include:$paraview/include"
 
 # For Library (.so .a) 
-export LIBRARY_PATH="/usr/lib:/usr/local/lib:$hamzstlib/trilinos/lib:$OMPI/lib64:$physics/irrlicht-1.8.5/lib/Linux:$hamzstlib/lib:$physics/Kratos-9.1/bin/Release/libs:$hamzstlib/lib/openmpi:$hamzstlib/Kitware/install/VTK/lib:$grass/lib:$paraview/lib:$hamzstlib/include/opencv4:$caldrazgames/lib:$caldrazgames/lib/OGRE"
+export LIBRARY_PATH="/usr/lib:/usr/local/lib:$hamzstlib/trilinos/lib:$OMPI/lib64:$physics/irrlicht-1.8.5/lib/Linux:$hamzstlib/scilab-6.1.1/lib/scilab:$hamzstlib/lib:$physics/Kratos-9.1/bin/Release/libs:$hamzstlib/lib/openmpi:$hamzstlib/Kitware/install/VTK/lib:$grass/lib:$paraview/lib:$hamzstlib/include/opencv4:$caldrazgames/lib:$caldrazgames/lib/OGRE"
 
 export LD_LIBRARY_PATH=$LIBRARY_PATH
 export SDL2_MIXER_LIBRARIES="$caldrazgames/lib"
@@ -62,7 +63,7 @@ export XDG_CONFIG_DIRS="/etc/xdg:/opt/kf5/etc/xdg"
 export XDG_DATA_DIRS="$hamzstlib/share:/usr/local/share:/usr/share"
 export QT_PLUGIN_PATH="/opt/qt5/plugins:opt/kf5/lib/plugins:/opt/kf5/lib/plugins/kcms:/usr/lib/qt5/plugins:/usr/lib"
 export MANPATH="/usr/share/man:/opt/jdk/man"
-export PKG_CONFIG_PATH="$hamzstlib/lib/pkgconfig:$hamzstlib/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:$caldrazgames/lib/pkgconfig"
+export PKG_CONFIG_PATH="$hamzstlib/lib/pkgconfig:$hamzstlib/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:$hamzstlib/scilab-6.1.1/lib/pkgconfig:$caldrazgames/lib/pkgconfig"
 
 # JAVA
 export MANDATORY_MANPATH="/opt/jdk/man"
