@@ -1,0 +1,5 @@
+mkdir build &&
+cd    build &&
+
+meson --prefix=/usr --buildtype=release .. &&
+ninja

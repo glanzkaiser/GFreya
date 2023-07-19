@@ -1,0 +1,9 @@
+./configure --prefix=/usr                 \
+            --confdir=/etc/mplayer        \
+            --enable-dynamic-plugins      \
+            --disable-libmpeg2-internal   \
+            --disable-ffmpeg_a            \
+            --enable-menu                 \
+            --enable-runtime-cpudetection \
+            --enable-gui                  &&
+make
